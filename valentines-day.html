@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Sayang!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+        body {
+            text-align: center;
+            background-color: #ffebee;
+            font-family: 'Indie Flower', cursive;
+            background-image: url('hearts-background.gif');
+            background-size: cover;
+            background-position: center;
+            color: #4a4a4a;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1, h2 {
+            color: #d32f2f;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .button {
+            display: inline-block;
+            margin: 15px;
+            padding: 12px 25px;
+            background: #ff4b2b;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 30px;
+            box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+        .button:hover {
+            background: #ff416c;
+            transform: scale(1.1);
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            animation: fadeIn 1.5s;
+        }
+    </style>
+    <script>
+        function showNext(current, next) {
+            document.getElementById(current).style.display = 'none';
+            document.getElementById(next).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>💖 Happy Valentine's Day! 💖</h1>
+    <div class="container">
+        <a href="#" class="button" onclick="showNext('intro', 'galeri')" id="intro">Klik Aku ❤️</a>
+    </div>
+    
+    <div id="galeri" class="content">
+        <h2>📸 Kenangan Kita</h2>
+        <p>Ingat nggak waktu pertama kali kita jalan bareng? Ini beberapa foto kita yang bikin senyum-senyum sendiri! 😍</p>
+        <img src="foto1.jpg" alt="Foto 1">
+        <img src="foto2.jpg" alt="Foto 2">
+        <br>
+        <a href="#" class="button" onclick="showNext('galeri', 'surat')">Lanjut 💌</a>
+    </div>
+    
+    <div id="surat" class="content">
+        <h2>💌 Surat Cinta Buat Kamu</h2>
+        <p>Hai cintaku! 💖</p>
+        <p>Dari pertama kali kenal, aku tahu kamu beda. Kamu kayak playlist favorit yang nggak pernah ngebosenin, kayak WiFi yang koneksinya selalu kuat di hati aku. Kadang kamu ngeselin, tapi justru itu yang bikin aku makin sayang! 😆</p>
+        <p>Kita udah banyak banget ngalamin hal seru bareng. Dari ngobrol ngalor ngidul sampai deep talk yang bikin hati hangat. Aku nggak sabar buat terus nemenin kamu dan bikin lebih banyak cerita seru ke depannya! 💕</p>
+        <p>I love you, dan aku bakal selalu ada buat kamu! 💖</p>
+        <br>
+        <a href="#" class="button" onclick="showNext('surat', 'kuis1')">Main Kuis! 🎮</a>
+    </div>
+    
+    <div id="kuis1" class="content">
+        <h2>🎮 Kuis Cinta!</h2>
+        <p>1. Kapan kita pertama kali ngobrol lama banget sampe lupa waktu? 🤭</p>
+        <a href="#" class="button" onclick="showNext('kuis1', 'kuis2')">Next ➡️</a>
+    </div>
+    
+    <div id="kuis2" class="content">
+        <h2>🎮 Kuis Cinta!</h2>
+        <p>2. Apa makanan favorit kamu yang aku selalu inget? 🍕🍔</p>
+        <a href="#" class="button" onclick="showNext('kuis2', 'kuis3')">Next ➡️</a>
+    </div>
+    
+    <div id="kuis3" class="content">
+        <h2>🎮 Kuis Cinta!</h2>
+        <p>3. Lagu apa yang selalu bikin kita inget satu sama lain? 🎶</p>
+        <a href="#" class="button" onclick="showNext('kuis3', 'kuis4')">Next ➡️</a>
+    </div>
+    
+    <div id="kuis4" class="content">
+        <h2>🎮 Kuis Cinta!</h2>
+        <p>4. Tempat impian kita buat liburan bareng? 🌍</p>
+        <a href="#" class="button" onclick="showNext('kuis4', 'kuis5')">Next ➡️</a>
+    </div>
+    
+    <div id="kuis5" class="content">
+        <h2>🎮 Kuis Cinta!</h2>
+        <p>5. Kalau kita punya hewan peliharaan bareng, kira-kira kita bakal kasih nama apa? 🐶🐱</p>
+        <a href="#" class="button" onclick="showNext('kuis5', 'waktu')">Next ➡️</a>
+    </div>
+    
+    <div id="waktu" class="content">
+        <h2>⏳ Kita Udah Barengan Selama...</h2>
+        <p>Kita udah bersama selama: <span id="count"></span> hari! 🥰</p>
+        <br>
+        <a href="#" class="button" onclick="showNext('waktu', 'harapan')">Harapan Buat Kita 💖</a>
+    </div>
+    
+    <div id="harapan" class="content">
+        <h2>💖 Harapan Buat Kita 💖</h2>
+        <p>Sayang, semoga kita terus bahagia, saling dukung, dan nggak pernah kehabisan alasan buat ketawa bareng! Aku pengen kita makin solid, makin erat, dan bisa ngabisin lebih banyak waktu buat bikin kenangan seru. ❤️</p>
+        <p>Aku bakal selalu ada buat kamu, no matter what! Love youuuu! 😘</p>
+    </div>
+    
+    <script>
+        function countDays() {
+            const startDate = new Date("2020-02-14");
+            const today = new Date();
+            const diffTime = Math.abs(today - startDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            document.getElementById("count").innerText = diffDays;
+        }
+        countDays();
+    </script>
+</body>
+</html>
